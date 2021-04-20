@@ -1,0 +1,7 @@
+{
+   "/*":{
+     "target": "http://10.1.1.9:5001",
+     "secure": false,
+     "logLevel":"debug"
+   }
+}

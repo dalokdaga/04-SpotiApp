@@ -1,0 +1,31 @@
+<div *ngIf = "error" class="alert alert-danger animated fadeIn">
+  <h3>Error</h3>
+  <p>
+      {{ mensajeError }}
+  </p>
+</div>
+
+<table *ngIf = "!error" class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Fecha de Alta</th>
+      <th scope="col"> Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <th>{{ usuario.id}}</th>
+      <th>{{ usuario.nombre_usuario}}</th>
+      <th>{{ usuario.fechacreacion | date: 'dd-MM-yyyy':'':'en'}}</th>
+      <th>{{ usuario.email}}</th>
+      <th>
+        <button class="btn btn-primary mb-2">Modificar</button>&nbsp;
+      </th>
+      <th>
+        <button class="btn btn-danger mb-2">Eliminar</button>
+      </th>
+    </tr>
+  </tbody>
+</table>
